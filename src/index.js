@@ -1,7 +1,6 @@
 import "./styles.css";
 
-let container = document.createElement("div");
-container.className = "container";
+let container = document.getElementsByClassName("container");
 
 let newDiv = document.createElement("div");
 newDiv.className = "wiki-item";
@@ -29,7 +28,7 @@ newDiv.appendChild(newContent);
 
 container.appendChild(newDiv);
 
-document.body.appendChild(container);
+//document.body.appendChild(container);
 
 /*
 if (document.readyState !== "loading") {
