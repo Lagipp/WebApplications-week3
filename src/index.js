@@ -35,8 +35,6 @@ for (let x = 0; x < 5; x++) {
   document.body.appendChild(container);
 }
 
-//document.body.appendChild(container);
-
 /*
 if (document.readyState !== "loading") {
   initializeCode();
