@@ -1,6 +1,9 @@
 import "./styles.css";
 
-let container = document.getElementsByClassName("container");
+//let container = document.getElementsByClassName("container");
+
+let container = document.createElement("div");
+container.className = "container";
 
 for (let x = 0; x < 5; x++) {
   let newDiv = document.createElement("div");
@@ -28,6 +31,8 @@ for (let x = 0; x < 5; x++) {
   newDiv.appendChild(newContent);
 
   container.appendChild(newDiv);
+
+  document.body.appendChild(container);
 }
 
 //document.body.appendChild(container);
