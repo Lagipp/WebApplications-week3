@@ -2,15 +2,31 @@ import "./styles.css";
 
 //let container = document.getElementsByClassName("container");
 
+/*fetch("https://dog.ceo/api/breed/australianshepherd/images/random")
+  .then((response) => response.json())
+  .then((data) => console.log(data));*/
+
 let container = document.createElement("div");
 container.className = "container";
 
 for (let x = 0; x < 5; x++) {
+  fetch("https://dog.ceo/api/breed/husky/images/random")
+    .then((response) => response.json())
+    .then((data) => {
+      //console.log(data);
+      let dogBreed = "Husky";
+      let dogImage = data.message;
+      createWikiItems(dogBreed, dogImage);
+    });
+}
+
+function createWikiItems(dogBreed, dogImage) {
   let newDiv = document.createElement("div");
   newDiv.className = "wiki-item";
 
   let newHeader = document.createElement("h1");
   newHeader.className = "wiki-header";
+  newHeader.innerHTML = dogBreed;
 
   let newContent = document.createElement("div");
   newContent.className = "wiki-content";
@@ -23,6 +39,7 @@ for (let x = 0; x < 5; x++) {
 
   let newImage = document.createElement("img");
   newImage.className = "wiki-img";
+  newImage.src = dogImage;
 
   newImageContainer.appendChild(newImage);
   newContent.appendChild(newParagraph);
