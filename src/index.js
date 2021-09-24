@@ -33,6 +33,7 @@ function createWikiItems(dogBreed, dogImage) {
 
   let newParagraph = document.createElement("p");
   newParagraph.className = "wiki-text";
+  newParagraph.innerHTML = "Lorem ipsum dolor sit amet";
 
   let newImageContainer = document.createElement("div");
   newImageContainer.className = "img-container";
